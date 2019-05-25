@@ -1,0 +1,39 @@
+<html>
+
+<body>
+    <div>
+        <p> Name: <input type="tex" id="name"> </p>
+        <p> Email: <input type="text" id="email"> </p>
+        <input type="button" name="Add" value="Add" onclick="add_Emp()">
+    </div>
+    <div id="out">
+
+    </div>
+
+    <script>
+        var emp = [];
+        var n, e;
+        function add_Emp() {
+            n = document.getElementById("name").value;
+            e = document.getElementById("email").value;
+            emp.push(e);
+            alert(n);
+
+            document.getElementById("out").innerHTML += "<p id='p"+n+"'>" + n + "|"+e + "<input id='"+n+"' type='button' value='Delete' onclick='delete_Emp(this)'>" + "</p>";
+        }
+
+        function delete_Emp(e) {
+            //var email = document.getElementById("email").value;
+            //var index = emp.indexOf(e);
+            //emp.splice(index,1);
+
+            //for(var i=0; i<emp.length; i++)
+            
+
+
+            document.getElementById('p'+e.id).innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>
